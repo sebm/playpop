@@ -1,7 +1,14 @@
-@(message: String)
+@(entries: List[Entry])
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message)
-    
+@main("PlayPop") {
+
+  @if(entries.isEmpty) {
+    <h1>Empty right now</h1>
+  } else {
+    <ul>
+      @entries.map { entry =>
+        <li>@entry.timestamp</li>
+      }
+    </ul>
+  }
 }
