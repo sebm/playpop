@@ -8,11 +8,17 @@ import models.Entry
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index(List[Entry]()))
+    Ok(views.html.index(Entry.all()))
   }
 
-  def push = TODO
+  def push = Action {
+    Entry.create(System.currentTimeMillis)
+    Redirect(routes.Application.index)
+  }
 
-  def pop = TODO
+  def pop = Action {
+    Entry.delete_oldest()
+    Redirect(routes.Application.index)
+  }
 
 }
