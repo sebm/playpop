@@ -1,4 +1,2 @@
-This is your new Play 2.1 application
-=====================================
+This is a demonstration of how to make a FILO stack with the Play framework for Scala.
 
-This file will be packaged with your application, when using `play dist`.
