@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  color: #0f0f0f;
+  font: 16px normal Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+section {
+  padding: 10px 30%;
+  border-top: none;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#pop {
+  float: right;
+}

@@ -1,12 +1,14 @@
 @(entries: List[Entry])
 
 @main("PlayPop") {
-
-  <a href="@routes.Application.push">push</a>
-  <a href="@routes.Application.pop">pop</a>
+<h1>PlayPop</h1>
+<h2>a FILO stack in Scala / Play</h2>
+<section>
+  <a id='push' href="@routes.Application.push">push</a>
+  <a id='pop' href="@routes.Application.pop">pop</a>
 
   @if(entries.isEmpty) {
-    <h1>Empty right now</h1>
+    <p>The stack is currently empty.</p>
   } else {
     <p>newest&hellip;</p>
     <ul>
@@ -16,4 +18,5 @@
     </ul>
     <p>oldest.</p>
   }
+</section>
 }
